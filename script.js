@@ -48,10 +48,10 @@ function createParticles() {
   function handleScroll() {
     const navbar = document.getElementById('navbar');
     if (window.scrollY > 100) {
-      navbar.style.background = 'rgba(0, 0, 0, 0.95)'; /* Adjusted for black */
+      navbar.style.background = 'rgba(0, 0, 0, 0.95)';
       navbar.style.padding = '15px 20px';
     } else {
-      navbar.style.background = 'rgba(0, 0, 0, 0.8)'; /* Adjusted for black */
+      navbar.style.background = 'rgba(0, 0, 0, 0.8)';
       navbar.style.padding = '20px';
     }
   }
@@ -106,8 +106,8 @@ function createParticles() {
   
   // Profile photo popup functionality
   const profileLink = document.getElementById('profile-link');
-  const profilePopup = document.getElementById('profile-popup');
-  const profilePopupImg = document.getElementById('profile-popup-img');
+  const profilePopup = document.getElementById('profilepic-popup');
+  const profilePopupImg = document.getElementById('profilepic-popup-img');
   const closeProfilePopup = profilePopup.querySelector('.close-popup');
   profileLink.addEventListener('click', (e) => {
     e.preventDefault();
@@ -145,13 +145,12 @@ function createParticles() {
     animateOnScroll.observe(element);
   });
   
-  // Q3: Text Analysis Function
+  // Text Analysis Function
   function analyzeText() {
     const textInput = document.getElementById('text-input').value;
     const resultDiv = document.getElementById('analysis-result');
     const words = textInput.trim().split(/\s+/);
   
-    // Task 1: Calculate letters, words, spaces, newlines, and special symbols
     let letters = 0;
     let spaces = 0;
     let newlines = (textInput.match(/\n/g) || []).length;
@@ -162,7 +161,6 @@ function createParticles() {
       else if (!/[\w\s\n]/.test(char)) specialSymbols++;
     }
   
-    // Task 2: Count pronouns
     const pronouns = {
       'i': 0, 'me': 0, 'mine': 0, 'my': 0, 'myself': 0,
       'you': 0, 'your': 0, 'yours': 0, 'yourself': 0,
@@ -177,7 +175,6 @@ function createParticles() {
       if (pronouns.hasOwnProperty(lowerWord)) pronouns[lowerWord]++;
     });
   
-    // Task 3: Count prepositions
     const prepositions = {
       'about': 0, 'above': 0, 'across': 0, 'after': 0, 'against': 0,
       'among': 0, 'around': 0, 'at': 0, 'before': 0, 'behind': 0,
@@ -192,14 +189,12 @@ function createParticles() {
       if (prepositions.hasOwnProperty(lowerWord)) prepositions[lowerWord]++;
     });
   
-    // Task 4: Count indefinite articles
     const articles = { 'a': 0, 'an': 0 };
     words.forEach(word => {
       const lowerWord = word.toLowerCase().replace(/[.,!?]/g, '');
       if (articles.hasOwnProperty(lowerWord)) articles[lowerWord]++;
     });
   
-    // Generate output
     let result = `
       <h3>Analysis Results:</h3>
       <p><strong>Letters:</strong> ${letters}</p>
@@ -239,19 +234,16 @@ function createParticles() {
   
   // Function to capture click events and page views
   function trackUserInteractions() {
-    // Track page views (on load and navigation)
     function logPageView() {
       const timestamp = new Date().toISOString();
       console.log(`${timestamp}, view, page`);
     }
   
-    // Track click events on all elements
     document.addEventListener('click', (event) => {
       const timestamp = new Date().toISOString();
       let eventType = 'click';
       let objectType = 'unknown';
   
-      // Determine the type of object clicked
       if (event.target.tagName === 'IMG') {
         objectType = 'image';
       } else if (event.target.tagName === 'A') {
@@ -264,14 +256,11 @@ function createParticles() {
         objectType = 'text';
       }
   
-      // Log the event
       console.log(`${timestamp}, ${eventType}, ${objectType}`);
     });
   
-    // Initial page view log
     logPageView();
   
-    // Log page view on navigation (simplified for single-page app)
     window.addEventListener('scroll', () => {
       const newPosition = window.scrollY;
       if (newPosition > 100 && !sessionStorage.getItem('lastViewLogged')) {
@@ -283,7 +272,7 @@ function createParticles() {
     });
   }
   
-  // Initialize tracking when the page loads
+  // Initialize tracking
   window.onload = (function(originalOnload) {
     return function() {
       if (originalOnload) originalOnload();
