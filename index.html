@@ -1,48 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Website</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hasini's Space</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Hello, I'm Sai Hasini Dandapanthula</h1>
-  
-  <h2>About Me</h2>
-<p>
-  I'm eager to learn new things,I'm from Warangal.<br>
-  I'm trying to learn coding.<br>
-  I love reading books.<br>
-  I enjoy exploring new tech.<br>
-  And here I am trying to build a website.
-</p>
-  <h2>Profile Picture</h2>
-  <img src="profile.jpeg" alt="Profile Picture" width="200">
-
-  <h2>My Birthplace</h2>
-  <img src="place1.jpeg" width="200" height="150">
-  <img src="place2.jpeg" width="200" height="150">
-
-  <h2>Education Background</h2>
-  <ul>
-    <li>School: Narayana </li>
-    <li>College: Narayana</li>
-    <li>Achievements:</li>
-    <ul>
-    <li>Secured an ALL India Rank of 3168 in JEE Mains 2024. </li>
-    <li>Secured an ALL India Rank of 7143 in JEE Advanced 2024. </li>
-    <li>Secured 328 marks in BITS session 1,2024.</li>
+  <div class="particles" id="particles"></div>
+  <a href="#" class="profile-link" id="profile-link">
+    <img src="profile.jpeg" alt="Profile" class="profile-icon">
+  </a>
+  <nav id="navbar">
+    <a href="#home" class="nav-link">Home</a>
+    <a href="#about" class="nav-link">About</a>
+    <a href="#hometown" class="nav-link">Hometown</a>
+    <a href="#education" class="nav-link">Education</a>
+    <a href="#achievements" class="nav-link">Achievements</a>
+    <a href="#cv" class="nav-link">CV</a>
+    <a href="#contact" class="nav-link">Contact</a>
+  </nav>
+  <section id="home">
+    <div class="content-wrapper">
+      <div class="typewriter-text" id="typing"></div>
+      <div class="subtext" id="subline">
+        A place where people never fail to make you feel insecure.
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Hey, I'm Hasini.<br>
+      I'm from Warangal.<br>
+      There's nothing much about me (aadhi zindagi jee ke liye dediya which was pointless).<br>
+      Just tryna vibe and survive in the world of engineering🌸
+    </p>
+  </section>
+  <section id="hometown">
+    <h2>Hometown</h2>
+    <p>There's nothing much in Warangal.</p>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="place1.jpeg" alt="Place 1" class="popup-img">
+        <p>
+          This is NIT Warangal,<br>
+          stressful (not as much as ours ofc),<br>
+          0 freedom.
+        </p>
+      </div>
+      <div class="gallery-item">
+        <img src="place2.jpeg" alt="Place 2" class="popup-img">
+        <p>
+          hey bhagwan,<br>
+          please grant me good cg.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section id="education">
+    <h2>Education</h2>
+    <ul class="education-list">
+      <li class="education-item">
+        <div class="education-year">2010 – 2017</div>
+        <div class="education-school">Greenwood High School, Warangal</div>
+      </li>
+      <li class="education-item">
+        <div class="education-year">2017 – 2018</div>
+        <div class="education-school">Sri Chaitanya High School, Warangal (absolutely useless)</div>
+      </li>
+      <li class="education-item">
+        <div class="education-year">2018 – 2024</div>
+        <div class="education-school">Narayana High School (a place where "freedom" is excluded from their dictionary, and "privacy" is a bad word)</div>
+      </li>
+      <li class="education-item">
+        <div class="education-year">2024 – Present</div>
+        <div class="education-school">IIITH (International Institute of Information Technology, Hyderabad)</div>
+      </li>
     </ul>
-  </ul>
-
-  <h2>Technical Skills</h2>
-  <ul>
-    <li>Python - Intermediate</li>
-    <li>C/Cpp - Intermediate</li>
-    <li>HTML/CSS - Beginner</li>
-    <li>Arduino/ESP32 - Intermediate</li>
-  </ul>
-
-  <h2>My CV</h2>
-  <a href="cv.pdf" target="_blank">Download my CV (PDF)</a>
+  </section>
+  <section id="achievements">
+    <h2>Achievements</h2>
+    <div class="achievements-container">
+      <div class="achievement-card glow">
+        <i class="fas fa-medal achievement-icon"></i>
+        <div class="achievement-title">JEE Mains</div>
+        <div class="achievement-rank">AIR 3168</div>
+        <div class="achievement-details">
+          Secured an impressive All India Rank of 3168 in JEE Mains, placing in the top 2% among over 10 lakh candidates nationwide. This achievement opened doors to prestigious engineering institutes across India.
+        </div>
+      </div>
+      <div class="achievement-card glow">
+        <i class="fas fa-trophy achievement-icon"></i>
+        <div class="achievement-title">JEE Advanced</div>
+        <div class="achievement-rank">AIR 7143</div>
+        <div class="achievement-details">
+          Qualified JEE Advanced with a rank of 7143, demonstrating exceptional problem-solving abilities and conceptual understanding in one of India's most challenging engineering entrance examinations.
+        </div>
+      </div>
+      <div class="achievement-card glow">
+        <i class="fas fa-award achievement-icon"></i>
+        <div class="achievement-title">BITSAT</div>
+        <div class="achievement-rank">328</div>
+        <div class="achievement-details">
+          Scored an impressive 328 in BITSAT, securing admission opportunity to the prestigious BITS Pilani. This score reflects excellence in aptitude, logical reasoning, and technical knowledge.
+        </div>
+      </div>
+    </div>
+    <p class="jee-message">JEE ke alawa kuch nahi 🫠</p>
+  </section>
+  <section id="cv">
+    <h2>CV</h2>
+    <a href="cv.pdf" target="_blank" class="cv-link">
+      <i class="fas fa-file-pdf"></i> View My CV (PDF)
+    </a>
+  </section>
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <ul class="contact-list">
+      <li><strong>Email:</strong> <a href="mailto:saihasini.d@students.iiit.ac.in">saihasini.d@students.iiit.ac.in</a></li>
+      <li><strong>Phone:</strong> 9100597546</li>
+    </ul>
+  </section>
+  <section id="text-analysis">
+    <h2>Text Analysis</h2>
+    <textarea id="text-input" rows="20" cols="50" placeholder="Enter text with more than 10,000 words..."></textarea>
+    <button onclick="analyzeText()">Analyze Text</button>
+    <div id="analysis-result"></div>
+  </section>
+  <div id="img-popup">
+    <img id="popup-img" src="" alt="Popup">
+    <div class="close-popup">×</div>
+  </div>
+  <div id="profile-popup" class="popup">
+    <img id="profile-popup-img" src="profile.jpeg" alt="Profile Popup">
+    <div class="close-popup">×</div>
+  </div>
+  <script src="script.js" defer></script>
 </body>
 </html>
