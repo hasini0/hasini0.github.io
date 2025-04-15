@@ -455,6 +455,10 @@
     background: linear-gradient(90deg, var(--accent), var(--secondary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    text-fill-color: transparent;
+    color: var(--accent); /* Fallback */
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
   
