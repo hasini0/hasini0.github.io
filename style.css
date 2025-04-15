@@ -26,7 +26,7 @@
   body {
     margin: 0;
     font-family: 'Poppins', 'Calibri', sans-serif;
-    background-color: #000000; /* Changed to black */
+    background-color: #000000; /* Black background */
     color: var(--text-light);
     line-height: 1.6;
     overflow-x: hidden;
@@ -132,7 +132,7 @@
   }
   
   nav a {
-    margin-left: 20px;
+    margin-left: 12px; /* Reduced margin for more links */
     text-decoration: none;
     color: var(--text-light);
     font-weight: 500;
@@ -649,6 +649,37 @@
     display: inline-block;
   }
   
+  #skills {
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.9), rgba(93, 92, 97, 0.8)); /* Adjusted for black */
+  }
+  
+  .skills-list {
+    list-style-type: none;
+    padding-left: 0;
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .skill-item {
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Adjusted shadow for black */
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); /* Adjusted shadow for black */
+  }
+  
   @media (max-width: 768px) {
     .profile-link {
       top: 10px;
@@ -663,7 +694,7 @@
       padding: 15px 10px;
     }
     nav a {
-      margin: 0 10px;
+      margin: 0 8px; /* Reduced margin for more links on small screens */
       font-size: 16px;
     }
     section {
@@ -686,5 +717,14 @@
     }
     #text-input {
       width: 90%;
+    }
+    .skills-list {
+      flex-direction: column;
+      align-items: center;
+    }
+    .skill-item {
+      font-size: 1rem;
+      width: 80%;
+      text-align: center;
     }
   }
