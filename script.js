@@ -151,12 +151,6 @@ function createParticles() {
     const resultDiv = document.getElementById('analysis-result');
     const words = textInput.trim().split(/\s+/);
   
-    // Check word count
-    if (words.length < 10000) {
-      resultDiv.innerHTML = '<p>Error: Please enter text with at least 10,000 words.</p>';
-      return;
-    }
-  
     // Task 1: Calculate letters, words, spaces, newlines, and special symbols
     let letters = 0;
     let spaces = 0;
